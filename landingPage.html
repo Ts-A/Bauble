@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="src/7-removebg-preview.png"/>
+    <title>Bauble</title>
+    <style>
+        *{
+            margin : 0;
+        }
+        body{
+            height: 100%;
+            overflow: hidden;
+        }
+        .video-container{
+            background-color : #023750;
+        }
+        .video-container #web-view{
+            position        : abolute;
+            top             : 0;
+            left            : 0;
+            width           : 100vw;
+            height          : 100vh;
+        }
+        .video-container #mobile-view{
+            display: none;
+        }
+        @media all and (max-width: 550px) {
+            #web-view{
+                display: none;
+            }
+            #mobile-view{
+                display: block !important;
+                position        : abolute;
+                top             : 0;
+                left            : 0;
+                width           : 100vw;
+                height          : 100vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="video-container">
+        <video src="src/Bauble-video.mp4" id='web-view' autoplay muted loop preload="auto">
+            <p>Your browser doesn't support .mp4 format to see the video</p>
+        </video>
+        <video src="src/Bauble(M)-video.mp4" id='mobile-view' autoplay muted loop preload="auto">
+            <p>Your browser doesn't support .mp4 format to see the video</p>
+        </video>
+    </section>
+</body>
+</html>
